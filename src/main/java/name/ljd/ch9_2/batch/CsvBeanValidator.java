@@ -10,7 +10,7 @@ import org.springframework.batch.item.validator.ValidationException;
 import org.springframework.batch.item.validator.Validator;
 import org.springframework.beans.factory.InitializingBean;
 
-public class CsvBeanValidator implements Validator<T>, InitializingBean {
+public class CsvBeanValidator<T> implements Validator<T>, InitializingBean {
 	private javax.validation.Validator validator;
 	@Override
 	public void afterPropertiesSet() throws Exception {
