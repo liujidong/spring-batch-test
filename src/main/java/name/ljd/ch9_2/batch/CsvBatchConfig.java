@@ -69,6 +69,7 @@ public class CsvBatchConfig {
 		jobRepositoryFactoryBean.setDatabaseType("oracle");
 		jobRepositoryFactoryBean.setDataSource(dataSource);
 		jobRepositoryFactoryBean.setTransactionManager(transactionManager);
+		//jobRepositoryFactoryBean.setIsolationLevelForCreate("ISOLATION_READ_COMMITTED");
 		return jobRepositoryFactoryBean.getObject();
 	}
 	@Bean 
