@@ -57,7 +57,7 @@ public class CsvBatchConfig {
 		JdbcBatchItemWriter<Person> writer = new JdbcBatchItemWriter<Person>();
 		writer.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<Person>());
 		String sql = "insert into person " + "(id,name,age,nation,address) "
-		+ "values(hibernator_seqence.nextval,:name,:age,:nation,:address)";
+		+ "values(hibernate_sequence.nextval,:name,:age,:nation,:address)";
 		writer.setSql(sql);
 		writer.setDataSource(dataSource);
 		return writer;

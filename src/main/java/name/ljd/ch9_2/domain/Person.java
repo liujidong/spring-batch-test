@@ -3,7 +3,7 @@ package name.ljd.ch9_2.domain;
 import javax.validation.constraints.Size;
 
 public class Person {
-	@Size(max=4,min=2)
+	@Size(max=8,min=2)
 	private String name;
 	private int age;
 	private String nation;
